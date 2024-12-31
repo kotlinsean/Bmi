@@ -11,4 +11,6 @@ fun main(){
     println(name.get(1))
     name="Jack"
     println(name)
+    val c='A'
+    println(c)
 }
