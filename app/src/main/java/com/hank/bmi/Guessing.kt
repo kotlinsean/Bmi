@@ -15,6 +15,17 @@ fun main() {
         val input = readLine()
         num = input?.toIntOrNull() ?: 0 //如果是null就得到右邊，不是的話就得到左邊
         println("The number you entered: $num")
+        val message = when {
+            num < secret -> "Bigger"
+            num > secret -> "Smaller"
+            else -> {
+                bingo = true
+                "You got it!"
+            }
+        }
+        println(message)
+        if (bingo) break
+        /*
         if (num < secret) {
             println("Bigger")
         } else if (num > secret) {
@@ -23,7 +34,7 @@ fun main() {
             println("You got it!")
             bingo = true
             break
-        }
+        }*/
 
     }
     if (!bingo) {
